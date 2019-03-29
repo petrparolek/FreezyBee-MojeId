@@ -20,10 +20,10 @@
     }
   ],
   "require": {
-    "nette/application": "~2.4",
+    "nette/application": "^2.4",
     "openid/php-openid": "@dev",
     "tracy/tracy": "^2.4",
-    "nette/di" : "~2.4"
+    "nette/di" : "^2.4"
   },
   "autoload": {
     "psr-4": {

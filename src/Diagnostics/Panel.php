@@ -83,8 +83,8 @@ class Panel implements IBarPanel
      */
     public function register(MojeId $mojeId)
     {
-        $mojeId->onRequest[] = $this->begin;
-        $mojeId->onResponse[] = $this->complete;
+        $mojeId->onRequest[] = [$this, 'begin'];
+        $mojeId->onResponse[] = [$this, 'complete'];
         Debugger::getBar()->addPanel($this);
     }
 }
