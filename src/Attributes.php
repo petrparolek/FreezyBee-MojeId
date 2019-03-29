@@ -2,14 +2,17 @@
 
 namespace FreezyBee\MojeId;
 
-use Nette\Object;
+use Nette\SmartObject;
 
 /**
  * Class Attributes
  * @package FreezyBee\MojeId
  */
-class Attributes extends Object
+class Attributes
 {
+
+    use SmartObject;
+
     const SIMPLE = 'simple';
     const FULL = 'full';
 

@@ -5,7 +5,7 @@ namespace FreezyBee\MojeId;
 use FreezyBee\MojeId\Exceptions\MojeIdException;
 use Nette\Http\Request;
 use Nette\Http\Response;
-use Nette\Object;
+use Nette\SmartObject;
 use Nette\Utils\ArrayHash;
 
 /**
@@ -14,8 +14,11 @@ use Nette\Utils\ArrayHash;
  * @method onRequest(\Auth_OpenID_AuthRequest $authRequest)
  * @method onResponse(ArrayHash $person, \Auth_OpenID_ConsumerResponse $response)
  */
-class MojeId extends Object
+class MojeId
 {
+
+    use SmartObject;
+
     /** @var callable[]  function (\Auth_OpenID_AuthRequest $authRequest); */
     public $onRequest = [];
 

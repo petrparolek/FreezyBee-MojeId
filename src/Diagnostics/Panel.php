@@ -3,7 +3,7 @@
 namespace FreezyBee\MojeId\Diagnostics;
 
 use FreezyBee\MojeId\MojeId;
-use Nette\Object;
+use Nette\SmartObject;
 use Nette\Utils\ArrayHash;
 use Nette\Utils\Callback;
 use Tracy\Debugger;
@@ -14,8 +14,11 @@ use Tracy\IBarPanel;
  * Class Panel
  * @package FreezyBee\MojeId\Diagnostics
  */
-class Panel extends Object implements IBarPanel
+class Panel implements IBarPanel
 {
+
+    use SmartObject;
+
     /**
      * @var ArrayHash
      */

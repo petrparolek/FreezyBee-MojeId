@@ -2,14 +2,17 @@
 
 namespace FreezyBee\MojeId;
 
-use Nette\Object;
+use Nette\SmartObject;
 
 /**
  * Class Policy
  * @package FreezyBee\MojeId
  */
-class Policy extends Object
+class Policy
 {
+
+    use SmartObject;
+
     const CERTIFICATE = 'certificate';
     const PASSWORD = 'password';
     const PHYSICAL = 'physical';
